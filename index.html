@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nexa Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- WELCOME SCREEN -->
+<div id="welcome-screen">
+  <h1>Welcome to Nexa Store 🛒</h1>
+  <p>Your Smart Shopping Destination</p>
+  <button onclick="enterStore()">Enter Shopping</button>
+</div>
+
+<!-- SHOP SCREEN -->
+<div id="shop-screen" style="display:none;">
+
+<header>
+  <h2>Nexa Store</h2>
+
+  <input type="text" id="search" placeholder="Search products..." onkeyup="searchProducts()">
+
+  <button onclick="showOrders()">
+    My Orders (<span id="count">0</span>)
+  </button>
+</header>
+
+<div class="filters">
+  <button onclick="displayProducts(products)">All</button>
+  <button onclick="filterCategory('T-Shirts')">T-Shirts</button>
+  <button onclick="filterCategory('Shirts')">Shirts</button>
+  <button onclick="filterCategory('Pants')">Pants</button>
+  <button onclick="filterCategory('Shoes')">Shoes</button>
+  <button onclick="filterCategory('Electronics')">Electronics</button>
+  <button onclick="filterCategory('Appliances')">Appliances</button>
+</div>
+
+<div id="products"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
